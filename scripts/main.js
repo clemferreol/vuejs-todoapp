@@ -13,6 +13,7 @@
           {title : "Ne pas manger comme un porc", isDone : false},
           {title : "Donner mon repas aux chiens", isDone : false}
       ],
+      newTask:''
     },
 
     methods : {
@@ -24,9 +25,17 @@
         }
         var multiple = count + ' ' + string;
         return count > 1 ? multiple + 's' : multiple
-      }
+      },
 
-    }
+      addTask : function(task) {
+      let text = this.newTask;
+      this.tasks.push({title: text, isDone: false});
+      this.newTask = '';
+      },
+
+      removeTask : function(index){
+      this.tasks.splice(index, 1);
+      }
+   }
   });
 }
-// autre manière remaining : return this.tasks.filter(task => !task.isDone).length;
