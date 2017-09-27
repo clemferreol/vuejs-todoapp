@@ -2,7 +2,6 @@
   'use strict';
 
   new Vue ({
-
     //L'élément définissant le périmètre
     //d'action de l'application vue.js
     el : 'main#app',

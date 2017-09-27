@@ -40,7 +40,7 @@
 
         <li class="collection-item" v-for="(task, index) in tasks">
             <input type="checkbox" v-bind:id="'t_' + (index + 1)" v-model:checked="task.isDone">
-            <label v-bind:for="'t_' + (index + 1)">{{ task.title }}</label> <!-- on doit mettre l'index du tableau pr afficher correctement le titre qu'on veut-->
+            <label v-bind:for="'t_' + (index + 1)">{{ task.title }}</label>
             <a href="#" class="link-delete" title="Supprimer cette tâche">
                 <i class="small material-icons" v-on:click="removeTask(index)">delete_forever</i>
             </a>
