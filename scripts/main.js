@@ -14,6 +14,19 @@
           {title : "Donner mon repas aux chiens", isDone : false}
       ],
     },
+
+    methods : {
+      remaining : function(string){
+        var count = 0
+        for(var i = 0; i < this.tasks.length; i++){
+          if(this.tasks[i].isDone == false)
+          count++;
+        }
+        var multiple = count + ' ' + string;
+        return count > 1 ? multiple + 's' : multiple
+      }
+
+    }
   });
 }
 // autre manière remaining : return this.tasks.filter(task => !task.isDone).length;
