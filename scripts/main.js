@@ -26,7 +26,7 @@
         return count > 1 ? multiple + 's' : multiple
       },
 
-      addTask : function(newTask) {
+      addTask : function() {
       let text = this.newTask.trim();
       this.tasks.push({title: text, isDone: false});
       this.newTask = '';
