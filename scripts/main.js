@@ -29,7 +29,7 @@
       addTask : function() {
       let text = this.newTask.trim();
       this.tasks.push({title: text, isDone: false});
-      this.newTask = '';
+      //this.newTask = '';
       },
 
       removeTask : function(index){
